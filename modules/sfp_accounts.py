@@ -35,7 +35,6 @@ sites = [
     {"r": "Blogmarks", "u": "http://blogmarks.net/user/{0}", "gRC": "200", "gRT": "<title>Blogmarks : Public marks from", "c": "bookmarks"},
     {"r": "Blogspot", "u": "http://{0}.blogspot.com", "gRC": "200", "gRT": "Blogger Template Style", "c": "blog"},
     {"r": "BodyBuilding.com", "u": "http://bodyspace.bodybuilding.com/{0}/", "gRC": "200", "gRT": "s BodySpace - Bodybuilding.com</title>", "c": "health"},
-    {"r": "Break", "u": "http://www.break.com/user/{0}", "gRC": "200", "gRT": " | Break.com</title>", "c": "video"},
     {"r": "Buzznet", "u": "http://{0}.buzznet.com/user/", "gRC": "200", "gRT": "body class=\"userhome\"", "c": "social"},
     {"r": "cafemom", "u": "http://www.cafemom.com/home/{0}", "gRC": "200", "gRT": "h3 id=\"profile-user\"", "c": "social"},
     {"r": "CarDomain", "u": "http://www.cardomain.com/member/{0}/", "gRC": "200", "gRT": "s Profile in", "c": "hobby"},
@@ -77,7 +76,6 @@ sites = [
     {"r": "FriendFinder-X", "u": "http://www.friendfinder-x.com/profile/{0}", "gRC": "200", "gRT": "Member Profile - FriendFinder-x</title>", "c": "dating"},
     {"r": "FunnyOrDie", "u": "http://www.funnyordie.com/{0}", "gRC": "200", "gRT": " - Home on Funny or Die</title>", "c": "video"},
     {"r": "Garmin connect", "u": "http://connect.garmin.com/modern/profile/{0}", "gRC": "200", "gRT": "VIEWER_USERPREFERENCES =", "c": "exercise"},
-    {"r": "GeekGrade", "u": "http://www.geekgrade.com/geeksheet/{0}/blogs", "gRC": "200", "gRT": "- Geek Grade</title>", "c": "social"},
     {"r": "Geocaching", "u": "http://www.geocaching.com/seek/nearest.aspx?u={0}", "gRC": "200", "gRT": "By Username (Hidden) - User:", "c": "hobby"},
     {"r": "GETItON", "u": "http://getiton.com/profile/{0}", "gRC": "200", "gRT": "s Profile</title>", "c": "dating"},
     {"r": "GitHub", "u": "https://api.github.com/users/{0}", "gRC": "200", "gRT": "\"login\": \"", "c": "coding"},
@@ -114,11 +112,10 @@ sites = [
     {"r": "Medium", "u": "https://medium.com/@{0}", "gRC": "200", "gRT": "name=\"description\" content=\"", "c": "news"},
     {"r": "Meetzur", "u": "http://www.meetzur.com/{0}", "gRC": "200", "gRT": "MEETZUR_PROFILE_300x250", "c": "dating"},
     {"r": "Mixcloud", "u": "http://www.mixcloud.com/{0}/", "gRC": "200", "gRT": "s Favorites | Mixcloud</title>", "c": "music"},
-    {"r": "Mixcrate", "u": "http://www.mixcrate.com/{0}", "gRC": "200", "gRT": "- Mixcrate</title>", "c": "music"},
     {"r": "Mixlr", "u": "http://mixlr.com/{0}/", "gRC": "200", "gRT": "is on Mixlr. Mixlr is a simple way to share live", "c": "music"},
     {"r": "Mod DB", "u": "http://www.moddb.com/members/{0}", "gRC": "200", "gRT": "View the Mod DB  member ", "c": "gaming"},
     {"r": "Muck Rack", "u": "http://muckrack.com/{0}", "gRC": "200", "gRT": "on Muck Rack</title>", "c": "news"},
-    {"r": "Muzy", "u": "http://{0}.muzy.com/", "gRC": "200", "gRT": "' property='og:title' />", "c": "images"},
+    {"r": "Muzy", "u": "http://{0}.muzy.com/", "gRC": "200", "gRT": "http://muzy-users.s3.amazonaws.com", "c": "images"},
     {"r": "MyAnimeList", "u": "http://myanimelist.net/profile/{0}", "gRC": "200", "gRT": "s Profile - MyAnimeList.net</title>", "c": "hobby"},
     {"r": "MyBuilder.com", "u": "http://www.mybuilder.com/profile/view/{0}", "gRC": "200", "gRT": "s profile</title>", "c": "jobs"},
     {"r": "myfitnesspal", "u": "http://www.myfitnesspal.com/user/{0}/status", "gRC": "200", "gRT": "s profile | MyFitnessPal.com</title>", "c": "health"},
@@ -155,10 +152,8 @@ sites = [
     {"r": "setlist.fm", "u": "http://www.setlist.fm/user/{0}", "gRC": "200", "gRT": "s setlist.fm | setlist.fm</title>", "c": "music"},
     {"r": "shelfari", "u": "http://www.shelfari.com/{0}", "gRC": "200", "gRT": "s Profile</title>", "c": "books"},
     {"r": "Shopcade", "u": "http://www.shopcade.com/{0}", "gRC": "200", "gRT": ") on Shopcade</title", "c": "shopping"},
-    {"r": "singlemuslim", "u": "http://www.singlemuslim.com/{0}", "gRC": "200", "gRT": "- Single Muslim Rest of the World</title>", "c": "dating"},
     {"r": "Slashdot", "u": "http://slashdot.org/~{0}", "gRC": "200", "gRT": " - Slashdot User</title>", "c": "news"},
     {"r": "slideshare", "u": "http://www.slideshare.net/{0}", "gRC": "200", "gRT": "s presentations</title>", "c": "presos"},
-    {"r": "SmiteGuru", "u": "https://smite.guru/stats/{0}", "gRC": "200", "gRT": "<title>SmiteGuru - ", "c": "gaming"},
     {"r": "SmugMug", "u": "http://{0}.smugmug.com", "gRC": "200", "gRT": "pageon: homepage", "c": "images"},
     {"r": "smule", "u": "http://www.smule.com/{0}/", "gRC": "200", "gRT": "s Profile on Smule</title>", "c": "music"},
     {"r": "snooth", "u": "http://www.snooth.com/profiles/{0}/", "gRC": "301", "gRT": "Location: http://www.snooth.com/profiles/John/", "c": "food"},
@@ -212,7 +207,7 @@ sites = [
 ]
 
 class sfp_accounts(SpiderFootPlugin):
-    """Accounts:Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc."""
+    """Accounts:Footprint:Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc."""
 
     # Default options
     opts = {
@@ -245,7 +240,7 @@ class sfp_accounts(SpiderFootPlugin):
             names = open(self.sf.myPath() + "/ext/ispell/names.list", 'r')
             lines = names.readlines()
             for item in lines:
-                self.commonNames.append(item.strip())
+                self.commonNames.append(item.strip().lower())
             names.close()
 
     # What events is this module interested in for input
@@ -312,6 +307,9 @@ class sfp_accounts(SpiderFootPlugin):
         for site in sites:
             if i >= self.opts['maxthreads']:
                 data = self.threadSites(name, siteList)
+                if data == None:
+                    return res
+
                 for ret in data.keys():
                     if data[ret]:
                         res.append(ret)
@@ -348,7 +346,7 @@ class sfp_accounts(SpiderFootPlugin):
             return None
 
         if eventName == "EMAILADDR":
-            name = eventData.split("@")[0]
+            name = eventData.split("@")[0].lower()
             if self.opts['generic'] is list() and name in self.opts['generic']:
                 self.sf.debug(name + " is a generic account name, skipping.")
                 return None
@@ -360,7 +358,7 @@ class sfp_accounts(SpiderFootPlugin):
             users.append(name)
             if "." in name:
                 # steve.micallef -> smicallef
-                users.append(name[0] + name.split(".")[1])
+                users.append(str(name[0] + name.split(".")[1]).lower())
 
             for user in users:
                 if user not in self.reportedUsers:

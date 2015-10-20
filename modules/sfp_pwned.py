@@ -14,7 +14,7 @@ import json
 from sflib import SpiderFoot, SpiderFootPlugin, SpiderFootEvent
 
 class sfp_pwned(SpiderFootPlugin):
-    """Pwned Password:Check Have I Been Pwned? for hacked accounts identified."""
+    """Pwned Password:Footprint,Investigate:Check Have I Been Pwned? for hacked accounts identified."""
 
     # Default options
     opts = { 
@@ -69,13 +69,13 @@ class sfp_pwned(SpiderFootPlugin):
         res = self.sf.fetchUrl(url, timeout=self.opts['_fetchtimeout'], 
             useragent="SpiderFoot", headers=hdrs)
 
-        if res['code'] == "404":
+        if res['code'] == 404:
             return None
 
         try:
             ret = json.loads(res['content'])
         except Exception as e:
-            self.sf.error("Error processing JSON response from HaveIBeenPwned?.", False)
+            self.sf.error("Error processing JSON response from HaveIBeenPwned?: " + str(e), False)
             return None
 
         return ret

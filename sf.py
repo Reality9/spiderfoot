@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------------------
 # Name:         sf
@@ -66,11 +67,6 @@ sfConfig = {
     '__webport': 5001,
     '__docroot': '',  # don't put trailing /
     '__modules__': None,  # List of modules. Will be set after start-up.
-    '__pghost':         '127.0.0.1', # For future PGSQL backend
-    '__pgdb':           'spiderfoot', # For future PGSQL backend
-    '__pgport':         '5432', # For future PGSQL backend
-    '__pguser':         'pgsql', # For future PGSQL backend
-    '__pgpass':         '', # For future PGSQL backend
     '_socks1type': '',
     '_socks2addr': '',
     '_socks3port': '',
@@ -92,7 +88,7 @@ sfOptdescs = {
     '_socks3port': 'SOCKS Server TCP Port. Usually 1080 for 4/5, 8080 for HTTP and 9050 for TOR.',
     '_socks4user': 'SOCKS Username. Valid only for SOCKS4 and SOCKS5 servers.',
     '_socks5pwd': "SOCKS Password. Valid only for SOCKS5 servers.",
-    '_socks6dns': "Pass DNS through the SOCKS proxy?",
+    '_socks6dns': "Resolve DNS through the SOCKS proxy? Has no affect when TOR is used: Will always be True.",
     '_torctlport': "The port TOR is taking control commands on. This is necessary for SpiderFoot to tell TOR to re-circuit when it suspects anonymity is compromised.",
     '_modulesenabled': "Modules enabled for the scan."  # This is a hack to get a description for an option not actually available.
 }
@@ -118,8 +114,9 @@ if __name__ == '__main__':
             sfModules[modName] = dict()
             mod = __import__('modules.' + modName, globals(), locals(), [modName])
             sfModules[modName]['object'] = getattr(mod, modName)()
-            sfModules[modName]['name'] = sfModules[modName]['object'].__doc__.split(":", 2)[0]
-            sfModules[modName]['descr'] = sfModules[modName]['object'].__doc__.split(":", 2)[1]
+            sfModules[modName]['name'] = sfModules[modName]['object'].__doc__.split(":", 3)[0]
+            sfModules[modName]['cats'] = sfModules[modName]['object'].__doc__.split(":", 3)[1].split(",")
+            sfModules[modName]['descr'] = sfModules[modName]['object'].__doc__.split(":", 3)[2]
             sfModules[modName]['provides'] = sfModules[modName]['object'].producedEvents()
             sfModules[modName]['consumes'] = sfModules[modName]['object'].watchedEvents()
             if hasattr(sfModules[modName]['object'], 'opts'):

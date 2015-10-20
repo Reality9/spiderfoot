@@ -29,7 +29,7 @@ sites = {
 
 
 class sfp_socialprofiles(SpiderFootPlugin):
-    """Social Media Profiles:Identify the social media profiles for human names identified."""
+    """Social Media Profiles:Footprint:Identify the social media profiles for human names identified."""
 
     # Default options
     opts = {
@@ -158,7 +158,7 @@ class sfp_socialprofiles(SpiderFootPlugin):
                                     continue
 
                         self.sf.info("Social Media Profile found at " + site + ": " + match)
-                        evt = SpiderFootEvent("SOCIAL_MEDIA", match,
+                        evt = SpiderFootEvent("SOCIAL_MEDIA", site + ": " + match,
                                               self.__name__, event)
                         self.notifyListeners(evt)
 

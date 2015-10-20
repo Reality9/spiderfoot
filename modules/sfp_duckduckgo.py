@@ -14,7 +14,7 @@ import json
 from sflib import SpiderFoot, SpiderFootPlugin, SpiderFootEvent
 
 class sfp_duckduckgo(SpiderFootPlugin):
-    """DuckDuckGo:Query DuckDuckGo's API for descriptive information about your target."""
+    """DuckDuckGo:Footprint,Investigate:Query DuckDuckGo's API for descriptive information about your target."""
 
     # Default options
     opts = {
@@ -70,7 +70,11 @@ class sfp_duckduckgo(SpiderFootPlugin):
             self.sf.error("Unable to fetch " + url, False)
             return None
 
-        ret = json.loads(res['content'])
+        try:
+            ret = json.loads(res['content'])
+        except BaseException as e:
+            ret = None
+
         if ret == None:
             self.sf.error("Unable to process empty response from DuckDuckGo for: " + \
                           eventData, False)

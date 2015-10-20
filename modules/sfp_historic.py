@@ -20,7 +20,7 @@ from sflib import SpiderFoot, SpiderFootPlugin, SpiderFootEvent
 
 
 class sfp_historic(SpiderFootPlugin):
-    """Historic Files:Identifies historic versions of interesting files/pages from the Wayback Machine."""
+    """Historic Files:Footprint:Identifies historic versions of interesting files/pages from the Wayback Machine."""
 
     # Default options
     opts = {
@@ -122,7 +122,11 @@ class sfp_historic(SpiderFootPlugin):
                 self.sf.error("Unable to fetch " + url, False)
                 continue
 
-            ret = json.loads(res['content'])
+            try:
+                ret = json.loads(res['content'])
+            except BaseException as e:
+                ret = None
+
             if ret == None:
                 self.sf.error("Unable to process empty response from archive.org: " + \
                               eventData, False)
